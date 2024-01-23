@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.CSS 자손선택자</title>
+    <!--
+        날짜 : 2024/01/23
+        이름 : 김철학
+        내용 : CSS 자손선택자 실습
+    -->
+    <style>
+        /* 자식 선택자 */
+        body > h3 {
+            color: orange;
+        }
+
+        div > h3 {
+            color: blue;
+        }
+
+        .txt1 > i {
+            color: green;
+        }
+
+        /* 후손 선택자 */
+        .txt1 b {
+            background: yellow;
+        }
+        .txt2 b {
+            background: green;
+        }
+
+        /* 형제 선택자 */
+        #seoul + li {
+            color: orange;
+        }
+
+        #seoul ~ li {
+            background: skyblue;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>2.CSS 자손선택자</h3>
+   
+    <ul>       
+        <li class="c1">서울</li>
+        <li class="c2">대전</li>
+        <li class="c3">대구</li>
+        <li class="c4">
+            <b>부산</b>
+            <ol>
+                <li class="c1">다대포</li>
+                <li class="c2">자갈치</li>
+                <li class="c3">광안리</li>
+                <li class="c4">해운대</li>
+            </ol>
+        </li>
+        <li class="c5">광주</li>
+    </ul>
+       
+    <ol>       
+        <li class="c1">인천</li>
+        <li class="c2">춘천</li>
+        <li class="c3">원주</li>
+        <li class="c4">세종</li>
+        <li class="c5">울산</li>
+    </ol>
+
+</body>
+</html>
